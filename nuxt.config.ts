@@ -27,36 +27,18 @@ export default defineNuxtConfig({
     // chore
     '@nuxtjs/eslint-module',
     // styling & ui
-    '@nuxtjs/tailwindcss',
     'nuxt-headlessui',
     'nuxt-icon',
     '@nuxtjs/color-mode',
-    // management
     '@pinia/nuxt',
     '@vueuse/nuxt',
-    // contents,
     '@nuxt/content',
-
-    // todo: feat/localization
-    // '@nuxtjs/i18n'
+    '@element-plus/nuxt',
   ],
 
   css: [
     resolve('./assets/scss/_variables.scss'),
     resolve('./assets/scss/app.scss'),
-  ],
-
-  components: [
-    {
-      prefix: 'Layout',
-      path: resolve('./components/layouts'),
-      global: true,
-    },
-    {
-      prefix: 'Awesome',
-      path: resolve('./components/awesome'),
-      global: true,
-    },
   ],
 
   imports: {
@@ -87,34 +69,4 @@ export default defineNuxtConfig({
       theme: 'github-dark',
     },
   },
-
-  // todo: feat/localization
-  // module::i18n
-  // i18n: {
-  //   strategy: 'no_prefix',
-  //   defaultLocale: 'en',
-  //   langDir: 'locales',
-  //   vueI18n: {
-  //     fallbackLocale: 'en',
-  //   },
-  //   detectBrowserLanguage: {
-  //     useCookie: true,
-  //     fallbackLocale: 'en',
-  //     redirectOn: 'root',
-  //   },
-  //   locales: [
-  //     {
-  //       code: 'en', // English
-  //       iso: 'en-US',
-  //       name: 'English',
-  //       file: 'en.yml',
-  //     },
-  //     {
-  //       code: 'id', // Indonesia
-  //       iso: 'id-ID',
-  //       name: 'Indonesia',
-  //       file: 'id.yml',
-  //     }
-  //   ]
-  // },
 })
